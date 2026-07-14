@@ -226,3 +226,54 @@ footer.innerHTML="© "+new Date().getFullYear()+" Sameer Enterprises";
 }
 
 console.log("Sameer Enterprises v1.0 Ready");
+
+// Dynamic Product System
+
+fetch("products.json")
+.then(response => response.json())
+.then(data => {
+
+const container = document.getElementById("products-container");
+
+if (!container) return;
+
+Object.keys(data).forEach(category => {
+
+data[category].forEach(product => {
+
+container.innerHTML += 
+<div class="product-card">
+
+<div class="product-image">
+<img src="${product.image}" alt="${product.name}">
+</div>
+
+<div class="product-details">
+<h2>${product.name}</h2>
+
+<p class="price">
+₹${product.price}
+<span>₹${product.oldPrice}</span>
+</p>
+
+<p>⭐ ${product.rating}</p>
+
+<p>${product.badge}</p>
+
+<a href="${product.buyLink}" target="_blank">
+<button class="buy-btn">
+🛒 Buy Now
+</button>
+</a>
+
+</div>
+
+</div>
+;
+
+});
+
+});
+
+})
+.catch(error => console.log(error));
