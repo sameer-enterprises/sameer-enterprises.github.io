@@ -1,0 +1,20 @@
+{
+  "Fashion": [
+    {
+      "id": 1,
+      "name": "Premium Raincoat",
+      "price": 299,
+      "oldPrice": 599,
+      "discount": "50%",
+      "rating": 4.8,
+      "image": "assets/products/raincoat.webp",
+      "buyLink": "https://www.wishlink.com/share/nqewhh",
+      "badge": "Best Seller"
+    }
+  ],
+
+  "Electronics": [],
+  "HomeKitchen": [],
+  "Beauty": [],
+  "Accessories": []
+}
